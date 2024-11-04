@@ -1,0 +1,29 @@
+{
+  "name": "abi-shrestha",
+  "version": "2.0",
+  "description": "Portfolio Website of Abi Shrestha",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs",
+    "deploy": "gh-pages -d docs/.vitepress/dist"
+  },
+  "type": "module",
+  "author": "Abi Shrestha",
+  "devDependencies": {
+    "@types/node": "^20.12.4",
+    "@types/vue": "^2.0.0",
+    "date-fns": "^3.6.0",
+    "gray-matter": "^4.0.3",
+    "typescript": "^5.4.3",
+    "vitepress": "^1.0.2",
+    "vue": "^3.4.21"
+  },
+  "dependencies": {
+    "gh-pages": "^6.2.0",
+    "lucide-vue-next": "^0.454.0",
+    "markdown-it": "^14.1.0"
+  }
+}

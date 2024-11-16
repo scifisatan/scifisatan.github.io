@@ -1,9 +1,8 @@
 ---
 date: 2022-08-10
 title: Basic Markdown Formatting
+lastUpdated: false
 ---
-
-
 
 <PostDetail>
 
@@ -232,5 +231,4 @@ GitHub supports emoji! Check out the [Emoji Cheat Sheet](https://github.com/sfxc
 ## References
 
 * https://guides.github.com/features/mastering-markdown/
-
 </PostDetail>

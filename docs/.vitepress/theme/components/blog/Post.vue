@@ -53,13 +53,21 @@ const formatDate = (dateString: string) => {
 
   .post-article {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .post-article {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
   }
 
   .post-title {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
     /* text-3xl */
     font-weight: 500;
     /* font-medium */
@@ -70,19 +78,31 @@ const formatDate = (dateString: string) => {
     transition: colors 0.3s;
   }
 
+  @media (min-width: 640px) {
+    .post-title {
+      font-size: 1.875rem;
+    }
+  }
+
   .dark .post-title {
     color: #f3f4f6;
     /* dark:text-gray-100 */
   }
 
   .post-date {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     /* text-sm */
     font-variant-numeric: tabular-nums;
     /* tabular-nums */
     color: #6b7280;
     /* text-gray-500 */
-    flex-shrink: 0;
+  }
+
+  @media (min-width: 640px) {
+    .post-date {
+      font-size: 0.875rem;
+      flex-shrink: 0;
+    }
   }
 
   .dark .post-date {

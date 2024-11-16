@@ -1,43 +1,95 @@
 <script setup lang="ts">
-import { useData } from 'vitepress'
 import usePosts from '../../composables/usePosts'
+import MarkdownIt from 'markdown-it'
 
-const { site } = useData()
+const { currentPost: post } = usePosts()
 
-const { currentPost:post,  prevPost, nextPost } = usePosts()
+
 </script>
 
 <template>
   <div>
-    <div>
-      <h3
-        class="mb-8 mt-2 text-2xl font-bold tracking-tight text-[color:var(--vp-c-brand-light)] dark:text-[color:var(--vp-c-brand-dark)]">
-        {{ post.title }}
-      </h3>
-      <slot />
-      <div class="flex justify-between items-center mt-2 text-gray-500">
-        <a v-if="prevPost" :href="`${site.base}blog${prevPost.href}`"
-          class="inline-flex items-center font-medium dark:text-white hover:text-[color:var(--vp-c-brand-dark)]">
-          <div class="i-bx:arrow-back mr-2" />
-          <span>Previous Post</span>
-        </a>
-        <div v-if="!prevPost" />
-        <a v-if="nextPost" :href="`${site.base}blog${nextPost.href}`"
-          class="inline-flex items-center font-medium dark:text-white hover:text-[color:var(--vp-c-brand-dark)]">
-          <span>Next Post</span>
-          <div class="i-bx:right-arrow-alt ml-2" />
-        </a>
-      </div>
-    </div>
    
+   <a href="javascript:history.back()" class="go-back-link">
+      ← Go back
+    </a>
+     
+    <h1 class="post-title">
+      {{ post.title }}
+    </h1>
+    <p>
+      <time :datetime="post.date.string" class="post-date">
+        {{ new Date(post.date.string).toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric'
+      }) }}
+      </time>
+    </p>
+
+    <slot/>
+
+    <!-- Add Giscus component here -->
+    <Giscus
+      repo="scifisatan/scifisatan.github.io"
+      repo-id="R_kgDOJiWKcw"
+      category="General"
+      category-id="DIC_kwDOJiWKc84CkUL2"
+      mapping="pathname"
+      reactions-enabled="1"
+      emit-metadata="0"
+      input-position="top"
+      theme="preferred_color_scheme"
+      lang="en"
+    />
   </div>
 </template>
 
 <style scoped>
-.vp-doc h1,
-h2,
-h3,
-hr {
-  margin: 12px 0 0 0;
+/* Add styles for the go back link */
+.go-back-link {
+  color: var(--vp-c-brand);
+  text-decoration: none;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.post-title {
+  color: var(--vp-c-brand);
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.post-date {
+  font-size: 0.875rem;
+  color: var(--vp-c-text-secondary);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .post-title {
+    font-size: 2rem;
+  }
+
+  .go-back-link {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-title {
+    font-size: 1.75rem;
+  }
+
+  .post-date {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
 }
 </style>

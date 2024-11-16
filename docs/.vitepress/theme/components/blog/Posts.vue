@@ -127,7 +127,4 @@ const postsByYear = computed(() => {
   color: var(--vp-c-text-1);
 }
 
-.posts-container {
-  margin-top: 1rem;
-}
 </style>

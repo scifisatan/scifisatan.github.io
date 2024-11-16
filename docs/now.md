@@ -1,3 +1,7 @@
+---
+lastUpdated: false
+---
+
 # Inspired by [now movement](https://sive.rs/nowff)
 
 Always wanted to keep this when i made my website. Finally the time has come. Grateful!

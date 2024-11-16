@@ -14,6 +14,44 @@ hero:
     - theme: alt
       text: Digital Garden
       link: /knowledge/index
+
+head:
+  - - meta
+    - itemprop: name
+      content: Abi Shrestha
+  - - meta
+    - itemprop: description
+      content: Portfolio Website of Abi Shrestha
+  - - meta
+    - itemprop: image
+      content: /preview-portfolio.png
+  - - meta
+    - property: og:url
+      content: https://abishrestha.com.np/
+  - - meta
+    - property: og:type
+      content: website
+  - - meta
+    - property: og:title
+      content: Abi Shrestha
+  - - meta
+    - property: og:description
+      content: Portfolio Website of Abi Shrestha
+  - - meta
+    - property: og:image
+      content: /preview-portfolio.png
+  - - meta
+    - name: twitter:card
+      content: summary_large_image
+  - - meta
+    - name: twitter:title
+      content: Abi Shrestha
+  - - meta
+    - name: twitter:description
+      content: Portfolio Website of Abi Shrestha
+  - - meta
+    - name: twitter:image
+      content: /preview-portfolio.png
 ---
 What am I upto right [now](/now)?
 

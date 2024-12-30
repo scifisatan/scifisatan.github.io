@@ -11,8 +11,7 @@ Always wanted to keep this when i made my website. Finally the time has come. Gr
 - I'm involved in bunch of stuffs:
     - Campus Ambassador of LOCUS
     - Executive Member of LOST
-    - Event Lead of Hack The Circle
-    - Executive Member of Collabyte
-    - Web Development Lead of AR Treasure Hunt
-
-- Want to do TEDxKhwopa somewhere next year. just a wish
+    - Organising LOCUS Cubing Nepal 2025
+    - Head of Marketing & Branding in Hult Prize at KhCE
+    
+ 

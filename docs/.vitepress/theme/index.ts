@@ -6,7 +6,6 @@ import PostDetail from './components/blog/PostDetail.vue'
 import RecentPosts from './components/blog/RecentPosts.vue'
 import Giscus from '@giscus/vue'
 
-
 export default {
   ...DefaultTheme,
   enhanceApp({ app }: { app: App }) {

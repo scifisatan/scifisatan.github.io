@@ -22,7 +22,7 @@ export default defineConfig({
 
     socialLinks: [
       { icon: "github", link: "https://github.com/scifisatan" },
-      { icon: "x", link: "https://x.com/dotfkemup" },
+      { icon: "x", link: "https://x.com/39abii_" },
       { icon: "linkedin", link: "https://linkedin.com/in/39abii" },
     ],
     search: {

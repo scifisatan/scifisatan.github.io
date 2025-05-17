@@ -8,7 +8,9 @@
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs",
-    "deploy": "vitepress build docs && gh-pages -d docs/.vitepress/dist"
+    "push": "git add .  && git commit -m `build push` && git push",
+    "deploy": "bun run push && vitepress build docs && gh-pages -d docs/.vitepress/dist"
+  
   },
   "type": "module",
   "author": "Abi Shrestha",
